@@ -1,0 +1,41 @@
+<div class="container">
+    <h3><a href="/autos">Lista de autos</a></h3>
+    <h1>Detalle del auto</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td> {{ autom.nombre }} </td>
+                </tr>
+                <tr>
+                    <td>Marca</td>
+                    <td> {{ autom.marca }} </td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td> {{ autom.color }} </td>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td> {{ autom.estado }} </td>
+                </tr>
+                <tr>
+                    <td>Stock</td>
+                    <td> {{ autom.stock }} </td>
+                </tr>
+                <tr>
+                    <td>Capacidad</td>
+                    <td> {{ autom.capacidad }} </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3><a href="/autos/edit/{{ autom._id }}">EDITAR</a></h3>
+
+        <form action="/autos/delete/{{ autom._id }}" method="POST">
+            <button type="submit">ELIMINAR</button>
+        </form>
+    </form>
+</div>
+

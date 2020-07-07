@@ -1,4 +1,4 @@
-<h1>Autos</h1>
+<h1>Autos Disponibles</h1>
 
 <p>
     <div class="container">
@@ -19,7 +19,7 @@
                 <tbody>
                     {{# each autos}}
                     <tr>
-                        <td>{{ nombre }}</td>
+                        <td><a href="/autos/show/{{ _id }} "> {{ nombre }} </td>
                         <td>{{ marca }}</td>
                         <td>{{ color }}</td>
                         <td>{{ estado }}</td>

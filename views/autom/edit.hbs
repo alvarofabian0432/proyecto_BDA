@@ -1,0 +1,44 @@
+<div class="container">
+    <h3><a href="/autos">Lista de autos</a></h3>
+
+    <h1>Editar auto</h1>
+
+    <form action="/autos/update/{{ autom.id }}" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" value=" {{ autom.nombre }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Marca</td>
+                    <td><input type="text" name="marca" value=" {{ autom.marca }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td><input type="text" name="color" value=" {{ autom.color }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Estado</td>
+                    <td><input type="text" name="estado" value=" {{ autom.estado }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Stock</td>
+                    <td><input type="text" name="stock" value=" {{ autom.stock }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Capacidad</td>
+                    <td><input type="text" name="capacidad" value=" {{ autom.capacidad }}"/> </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Update" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+
+
