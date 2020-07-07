@@ -1,0 +1,36 @@
+<h1>Autos</h1>
+
+<p>
+    <div class="container">
+        <h3><a href="/autos/create">Añadir Auto</a></h3>
+        <h1>Lista de Autos</h1>
+        {{#if autos }}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Marca</th>
+                        <th>Color</th>
+                        <th>Estado</th>
+                        <th>Stock</th>
+                        <th>Capacidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{# each autos}}
+                    <tr>
+                        <td>{{ nombre }}</td>
+                        <td>{{ marca }}</td>
+                        <td>{{ color }}</td>
+                        <td>{{ estado }}</td>
+                        <td>{{ stock }}</td>
+                        <td>{{ capacidad }}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>                
+            </table>
+        {{~^~}}
+            <div>Autos no encontrados</div>
+        {{/if}}
+    </div>
+</p>
