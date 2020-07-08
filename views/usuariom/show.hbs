@@ -1,0 +1,41 @@
+<div class="container">
+    <h3><a href="/usuarios">Lista de usuarios</a></h3>
+    <h1>Detalle del usuario</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td> {{ usuariom.nombre }} </td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td> {{ usuariom.username }} </td>
+                </tr>
+                <tr>
+                    <td>Correo</td>
+                    <td> {{ usuariom.correo }} </td>
+                </tr>
+                <tr>
+                    <td>Celular</td>
+                    <td> {{ usuariom.celular }} </td>
+                </tr>
+                <tr>
+                    <td>Preferencia</td>
+                    <td> {{ usuariom.preferencia }} </td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td> {{ usuariom.edad }} </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3><a href="/usuarios/edit/{{ usuariom._id }}">EDITAR</a></h3>
+
+        <form action="/usuarios/delete/{{ usuariom._id }}" method="POST">
+            <button type="submit">ELIMINAR</button>
+        </form>
+    </form>
+</div>
+

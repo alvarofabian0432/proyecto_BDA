@@ -1,0 +1,36 @@
+<h1>Trabajadores Disponibles</h1>
+
+<p>
+    <div class="container">
+        <h3><a href="/trabajadores/create">Añadir Trabajador</a></h3>
+        <h1>Lista de Trabajadores</h1>
+        {{#if trabajadores }}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Username</th>
+                        <th>Correo</th>
+                        <th>Celular</th>
+                        <th>Cargo</th>
+                        <th>Area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{# each trabajadores}}
+                    <tr>
+                        <td><a href="/trabajadores/show/{{ _id }} "> {{ nombre }} </td>
+                        <td>{{ username }}</td>
+                        <td>{{ correo }}</td>
+                        <td>{{ celular }}</td>
+                        <td>{{ cargo }}</td>
+                        <td>{{ area }}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>                
+            </table>
+        {{~^~}}
+            <div>Trabajadores no encontrados</div>
+        {{/if}}
+    </div>
+</p>

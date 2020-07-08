@@ -1,0 +1,44 @@
+<div class="container">
+    <h3><a href="/trabajadores">Lista de trabajadores</a></h3>
+
+    <h1>Editar trabajador</h1>
+
+    <form action="/trabajadores/update/{{ trabajadorm.id }}" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" value=" {{ trabajadorm.nombre }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" value=" {{ trabajadorm.marca }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Correo</td>
+                    <td><input type="text" name="correo" value=" {{ trabajadorm.color }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Celular</td>
+                    <td><input type="text" name="celular" value=" {{ trabajadorm.estado }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Cargo</td>
+                    <td><input type="text" name="cargo" value=" {{ trabajadorm.stock }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Area</td>
+                    <td><input type="text" name="area" value=" {{ trabajadorm.capacidad }}"/> </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Update" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+
+

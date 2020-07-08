@@ -1,0 +1,36 @@
+<h1>Usuarios Disponibles</h1>
+
+<p>
+    <div class="container">
+        <h3><a href="/usuarios/create">Añadir usuario</a></h3>
+        <h1>Lista de usuarios</h1>
+        {{#if usuarios }}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Username</th>
+                        <th>Correo</th>
+                        <th>Celular</th>
+                        <th>Preferencia</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{# each usuarios}}
+                    <tr>
+                        <td><a href="/usuarios/show/{{ _id }} "> {{ nombre }} </td>
+                        <td>{{ username }}</td>
+                        <td>{{ correo }}</td>
+                        <td>{{ celular }}</td>
+                        <td>{{ preferencia }}</td>
+                        <td>{{ edad }}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>                
+            </table>
+        {{~^~}}
+            <div>Usuarios no encontrados</div>
+        {{/if}}
+    </div>
+</p>
