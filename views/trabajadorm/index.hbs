@@ -1,12 +1,21 @@
-<h1>Trabajadores Disponibles</h1>
+<!-- Image and text -->
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/trabajadores">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+    </a>
+</nav>
+<br>
+<h1 class="titulo text-white">Lista de Trabajadores Disponibles</h1>
+<br>
 
 <p>
-    <div class="container">
-        <h3><a href="/trabajadores/create">Añadir Trabajador</a></h3>
-        <h1>Lista de Trabajadores</h1>
+    <div class="centrado">
+        <br>
         {{#if trabajadores }}
-            <table>
-                <thead>
+            <table class="table text-white">
+                <thead class="thead-dark">
                     <tr>
                         <th>Nombre</th>
                         <th>Username</th>
@@ -29,6 +38,7 @@
                     {{/each}}
                 </tbody>                
             </table>
+            <button<h3><a href="/trabajadores/create" class="btn btn-dark">Añadir Trabajador</a></button>
         {{~^~}}
             <div>Trabajadores no encontrados</div>
         {{/if}}

@@ -1,8 +1,16 @@
-<div class="container">
-    <h3><a href="/autos">Lista de autos</a></h3>
-    <h1>Detalle del auto</h1>
-
-        <table>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/autos">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+  </a>
+</nav>
+<br>
+    <h3 class="titulo-2"><a href="/autos">Volver a la Lista de autos</a></h3>
+    <br>
+<div class="centrado-2 ">
+    <h1>Detalles del auto</h1>
+    <br>
+        <table class="table text-white">
             <tbody>
                 <tr>
                     <td>Nombre</td>
@@ -31,11 +39,14 @@
             </tbody>
         </table>
 
-        <h3><a href="/autos/edit/{{ autom._id }}">EDITAR</a></h3>
+        <center>
+            <h3 class="btn btn-dark"><a href="/autos/edit/{{ autom._id }}">EDITAR</a></h3>
+            
 
-        <form action="/autos/delete/{{ autom._id }}" method="POST">
-            <button type="submit">ELIMINAR</button>
-        </form>
+            <form action="/autos/delete/{{ autom._id }}" method="POST">
+                <button class="btn btn-dark" type="submit">ELIMINAR</button>
+            </form>
+        </center>
     </form>
 </div>
 

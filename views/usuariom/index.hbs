@@ -1,25 +1,32 @@
-<h1>Usuarios Disponibles</h1>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/usuarios">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+    </a>
+</nav>
+    </br>
+<h1 class="titulo-2 text-white" >Lista de Usuarios Disponibles</h1>
 
 <p>
-    <div class="container">
-        <h3><a href="/usuarios/create">Añadir usuario</a></h3>
-        <h1>Lista de usuarios</h1>
+    <div class="centrado">
+        <br>
         {{#if usuarios }}
-            <table>
-                <thead>
+            <table class="table text-white">
+                <thead class="thead-dark">
                     <tr>
-                        <th>Nombre</th>
-                        <th>Username</th>
-                        <th>Correo</th>
-                        <th>Celular</th>
-                        <th>Preferencia</th>
-                        <th>Edad</th>
+                        <th cope="col">Nombre</th>
+                        <th cope="col">Username</th>
+                        <th cope="col">Correo</th>
+                        <th cope="col">Celular</th>
+                        <th cope="col">Preferencia</th>
+                        <th cope="col">Edad</th>
                     </tr>
                 </thead>
                 <tbody>
                     {{# each usuarios}}
                     <tr>
-                        <td><a href="/usuarios/show/{{ _id }} "> {{ nombre }} </td>
+                        <td ><a href="/usuarios/show/{{ _id }} "> {{ nombre }} </td>
                         <td>{{ username }}</td>
                         <td>{{ correo }}</td>
                         <td>{{ celular }}</td>
@@ -29,6 +36,7 @@
                     {{/each}}
                 </tbody>                
             </table>
+            <button<h3><a href="/usuarios/create" class="btn btn-dark">Añadir Usuario</a></h3></button>
         {{~^~}}
             <div>Usuarios no encontrados</div>
         {{/if}}

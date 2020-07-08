@@ -1,7 +1,16 @@
-<div class="container">
-    <h3><a href="/autos">Lista de autos</a></h3>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/autos">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+  </a>
+</nav>
+<br>
+    <h3 class="titulo-2" ><a href="/autos">Volver a la Lista de autos</a></h3>
+    
+    <br>
+<div class="centrado-2">
 
-    <h1>Añadir nuevo auto</h1>
+    <h1><center>Añadir nuevo auto</center> </h1>
 
     <form action="/autos/save" method="post">
     
@@ -36,10 +45,12 @@
                     <input type="text" class="form-control" id="capacidad" name="capacidad" placeholder="Capacidad"/>
                 </div>
 
-                <div class="form-group">
-                    <input class="btn btn-primary" type="submit" value="Grabar">
-                </div>
+                <center>
+                    <div class="form-group">
+                        <input class="btn btn-dark" type="submit" value="Grabar">
 
+                    </div>
+                </center>
     </form>
 </div>
 

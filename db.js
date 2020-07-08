@@ -71,7 +71,7 @@ db.usuarios.insert(
 );
 
 //Inserción de trabajadores
-db.trabajadores.insert(
+db.trabajadors.insert(
     [
         {nombre:'Alvaro Motta',
         username: 'amotta',

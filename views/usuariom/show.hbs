@@ -1,8 +1,17 @@
-<div class="container">
-    <h3><a href="/usuarios">Lista de usuarios</a></h3>
-    <h1>Detalle del usuario</h1>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/usuarios">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+  </a>
+</nav>
+<br>
+<h3 class="titulo-2"><a href="/usuarios">Lista de usuarios</a></h3>
 
-        <table>
+<div class="centrado-2">
+    <br>
+    <h1>Detalle del usuario</h1>
+    <br>
+        <table class="table text-white">
             <tbody>
                 <tr>
                     <td>Nombre</td>
@@ -31,10 +40,10 @@
             </tbody>
         </table>
 
-        <h3><a href="/usuarios/edit/{{ usuariom._id }}">EDITAR</a></h3>
+        <h3 class="btn btn-dark"><a href="/usuarios/edit/{{ usuariom._id }}">EDITAR</a></h3>
 
         <form action="/usuarios/delete/{{ usuariom._id }}" method="POST">
-            <button type="submit">ELIMINAR</button>
+            <button class="btn btn-dark" type="submit">ELIMINAR</button>
         </form>
     </form>
 </div>

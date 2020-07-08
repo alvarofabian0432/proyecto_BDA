@@ -1,10 +1,18 @@
-<div class="container">
-    <h3><a href="/trabajadores">Lista de trabajadores</a></h3>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/trabajadores">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+  </a>
+</nav>
+<br>
+    <h3 class="titulo"><a href="/trabajadores">Lista de trabajadores</a></h3>
+    <br>
+<div class="centrado-2">
 
     <h1>Editar trabajador</h1>
-
+    <br>
     <form action="/trabajadores/update/{{ trabajadorm.id }}" method="post">
-        <table>
+        <table class="table text-white">
             <tbody>
                 <tr>
                     <td>Nombre</td>
@@ -32,7 +40,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="Update" />
+                        <input class="btn btn-dark" type="submit" value="Update" />
                     </td>
                 </tr>
             </tbody>

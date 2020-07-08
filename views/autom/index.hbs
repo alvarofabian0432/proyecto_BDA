@@ -1,36 +1,50 @@
-<h1>Autos Disponibles</h1>
+<!-- Image and text -->
 
-<p>
-    <div class="container">
-        <h3><a href="/autos/create">Añadir Auto</a></h3>
-        <h1>Lista de Autos</h1>
-        {{#if autos }}
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Marca</th>
-                        <th>Color</th>
-                        <th>Estado</th>
-                        <th>Stock</th>
-                        <th>Capacidad</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{# each autos}}
-                    <tr>
-                        <td><a href="/autos/show/{{ _id }} "> {{ nombre }} </td>
-                        <td>{{ marca }}</td>
-                        <td>{{ color }}</td>
-                        <td>{{ estado }}</td>
-                        <td>{{ stock }}</td>
-                        <td>{{ capacidad }}</td>
-                    </tr>
-                    {{/each}}
-                </tbody>                
-            </table>
-        {{~^~}}
-            <div>Autos no encontrados</div>
-        {{/if}}
-    </div>
-</p>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/autos">
+    <img src="/public/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    GoCar
+    </a>
+</nav>
+    </br>
+    <center><h1 class="titulo text-white">Autos Disponibles</h1></center>
+    <br>
+
+    <p>
+        <div class="centrado" >
+            <br>
+            {{#if autos }}
+                <table class="table text-white">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th cope="col">Nombre</th>
+                            <th cope="col">Marca</th>
+                            <th cope="col">Color</th>
+                            <th cope="col">Estado</th>
+                            <th cope="col">Stock</th>
+                            <th cope="col">Capacidad</th>
+                            <th cope="col">Operación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each autos}}
+                        <tr>
+                            <td class="btn btn-light"><a href="/autos/show/{{ _id }} "> {{ nombre }} </td>
+                            <td><center>{{ marca }}</center></td>
+                            <td><center>{{ color }}</center></td>
+                            <td><center>{{ estado }}</center></td>
+                            <td><center>{{ stock }}</center></td>
+                            <td><center>{{ capacidad }}</center></td>
+                            <td><center><button type="button" class="btn btn-light">Realizar pedido</button></center></td>
+                            
+                        </tr>
+                        {{/each}}
+                    </tbody>                
+                </table>
+            {{~^~}}
+                <div>Autos no encontrados</div>
+            {{/if}}
+            <br>
+            <center><button<h3><a href="/autos/create" class="btn btn-dark">Añadir Auto</a></h3></button></center>
+        </div>
+    </p>
